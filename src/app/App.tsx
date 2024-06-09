@@ -1,9 +1,19 @@
-import { Typography } from '../components/UI/Typography/Typography.tsx'
+import React, { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import MainPage from '../pages/MainPage'
 
-export const App = () => {
+export const App: React.FC = () => {
+	const { pathname } = useLocation()
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
+
 	return (
-		<div className={'h-screen flex justify-center items-center'}>
-			<Typography>CHEAT SHEETS SOON...</Typography>
-		</div>
+		<>
+			<Routes>
+				<Route index element={<MainPage />} />
+			</Routes>
+		</>
 	)
 }
