@@ -1,7 +1,13 @@
 import DefaultLayout from '../../layouts/DefaultLayout.tsx'
+import React from 'react'
+import Main from '../../Modules/Main'
 
-const MainPage = () => {
-	return <DefaultLayout title="Menu">123</DefaultLayout>
+const MainPage: React.FC = () => {
+	return (
+		<DefaultLayout title="Main Menu" withHeader={false}>
+			<Main />
+		</DefaultLayout>
+	)
 }
 
 export default MainPage

@@ -9,7 +9,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
 	const location = useLocation()
 
 	useEffect(() => {
-		document.title = title
+		document.title = `Cheat Sheets | ${title}`
 	}, [location, title])
 
 	return null
