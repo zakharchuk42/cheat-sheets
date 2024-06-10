@@ -1,5 +1,5 @@
-import { AppPages } from './app-pages.ts'
-import { colors } from './colors.ts'
+import { AppPages } from '../../utils/constants/app-pages.ts'
+import { colors } from '../../utils/constants/colors.ts'
 
 export const mainPageLinksSettings = [
 	{

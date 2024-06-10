@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import React, { JSX, useState } from 'react'
 import s from './main.module.scss'
-import { mainPageLinksSettings } from '../../utils/constants/global-menu.tsx'
+import { mainPageLinksSettings } from './constants.tsx'
 
 const Main: React.FC = () => {
 	return (

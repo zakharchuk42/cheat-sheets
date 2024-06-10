@@ -4,4 +4,9 @@
 
 body {
 	color: #4b4b4b;
+	font-size: 14px;
+}
+
+p {
+	padding: 10px 0;
 }

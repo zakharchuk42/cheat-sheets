@@ -4,6 +4,8 @@ import MainPage from '../pages/MainPage'
 import { AppPages } from '../utils/constants/app-pages.ts'
 import JSPage from '../pages/JSPage'
 import JSEventLoopPage from '../pages/JSEventLoopPage'
+import JSEventLoopExamplesPage from '../pages/JSEventLoopExamplesPage'
+import JSEventLoopTasksPage from '../pages/JSEventLoopTasksPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -20,6 +22,14 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_EVENT_LOOP}
 					element={<JSEventLoopPage />}
+				/>
+				<Route
+					path={AppPages.JS_EVENT_LOOP_EXAMPLES}
+					element={<JSEventLoopExamplesPage />}
+				/>
+				<Route
+					path={AppPages.JS_EVENT_LOOP_TASKS}
+					element={<JSEventLoopTasksPage />}
 				/>
 			</Routes>
 		</>
