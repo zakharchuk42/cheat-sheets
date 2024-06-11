@@ -19,7 +19,7 @@ export const menu: MenuType = {
 			subLinks: [
 				{
 					to: AppPages.JS_EVENT_LOOP_USEFUL,
-					title: 'Корисне',
+					title: 'Рекомендації',
 				},
 				{
 					to: AppPages.JS_EVENT_LOOP_EXAMPLES,
@@ -44,6 +44,10 @@ export const menu: MenuType = {
 					title: 'Задачі',
 				},
 			],
+		},
+		{
+			to: AppPages.JS_ARRAY_METHODS,
+			title: 'Методи масиву',
 		},
 	],
 }

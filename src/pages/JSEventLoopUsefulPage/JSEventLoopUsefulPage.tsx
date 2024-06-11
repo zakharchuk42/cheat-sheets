@@ -6,7 +6,7 @@ const JSEventLoopUsefulPage: React.FC = () => {
 	const { setTitle } = useTitle()
 
 	useEffect(() => {
-		setTitle('Корисне')
+		setTitle('Рекомендації')
 	}, [setTitle])
 
 	return <JSEventLoopUseful />
