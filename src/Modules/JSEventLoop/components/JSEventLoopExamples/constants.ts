@@ -11,6 +11,23 @@ console.log('end');
 		answer: `start => end => macrotask`,
 	},
 	{
+		code: `setTimeout(function timeout() {
+ console.log('macrotask');
+ }, 0);
+
+let p = new Promise(function(resolve, reject) {
+ console.log('Created promise');
+ resolve();
+ });
+
+p.then(function(){
+ console.log('microtask');
+ });
+
+console.log('end');`,
+		answer: 'created promise => end => microtask => macrotask',
+	},
+	{
 		code: `console.log('start');
 
 setTimeout(() => {

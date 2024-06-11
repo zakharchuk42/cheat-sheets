@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../../components/Typography/Title.tsx'
+import Title from '../../components/Typography'
 import EventLoop from '../../app/assets/event-loop.gif'
 
 const JSEventLoop: React.FC = () => {
