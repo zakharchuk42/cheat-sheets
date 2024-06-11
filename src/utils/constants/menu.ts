@@ -18,12 +18,12 @@ export const menu: MenuType = {
 			title: 'Event Loop',
 			subLinks: [
 				{
-					to: AppPages.JS_EVENT_LOOP_EXAMPLES,
-					title: 'Приклади',
-				},
-				{
 					to: AppPages.JS_EVENT_LOOP_USEFUL,
 					title: 'Корисне',
+				},
+				{
+					to: AppPages.JS_EVENT_LOOP_EXAMPLES,
+					title: 'Приклади',
 				},
 				{
 					to: AppPages.JS_EVENT_LOOP_TASKS,
@@ -34,6 +34,16 @@ export const menu: MenuType = {
 		{
 			to: AppPages.JS_ENVIRONMENT,
 			title: 'Область видимості змінних, замикання',
+			subLinks: [
+				{
+					to: AppPages.JS_ENVIRONMENT_EXAMPLES,
+					title: 'Приклади',
+				},
+				{
+					to: AppPages.JS_ENVIRONMENT_TASKS,
+					title: 'Задачі',
+				},
+			],
 		},
 	],
 }

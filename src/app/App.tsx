@@ -4,10 +4,13 @@ import MainPage from '../pages/MainPage'
 import { AppPages } from '../utils/constants/app-pages.ts'
 import JSPage from '../pages/JSPage'
 import JSEventLoopPage from '../pages/JSEventLoopPage'
-import JSEventLoopExamplesPage from '../pages/JSEventLoopExamplesPage'
+import JSEnvironmentExamplesPage from '../pages/JSEventLoopExamplesPage'
 import JSEventLoopTasksPage from '../pages/JSEventLoopTasksPage'
 import JSEventLoopUsefulPage from '../pages/JSEventLoopUsefulPage'
 import DefaultLayout from '../layouts/DefaultLayout.tsx'
+import JSEnvironmentPage from '../pages/JSEnvironmentPage'
+import JSEnvironmentTasksPage from '../pages/JSEnvironmentTasksPage'
+import JSEventLoopExamplesPage from '../pages/JSEnvironmentExamplesPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -36,6 +39,18 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_EVENT_LOOP_USEFUL}
 					element={<JSEventLoopUsefulPage />}
+				/>
+				<Route
+					path={AppPages.JS_ENVIRONMENT}
+					element={<JSEnvironmentPage />}
+				/>
+				<Route
+					path={AppPages.JS_ENVIRONMENT_EXAMPLES}
+					element={<JSEnvironmentExamplesPage />}
+				/>
+				<Route
+					path={AppPages.JS_ENVIRONMENT_TASKS}
+					element={<JSEnvironmentTasksPage />}
 				/>
 			</Routes>
 		</DefaultLayout>
