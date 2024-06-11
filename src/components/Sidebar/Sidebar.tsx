@@ -8,6 +8,7 @@ const Sidebar: React.FC = () => {
 	const { pathname } = useLocation()
 
 	const keyMenu = pathname.slice(1, 3)
+	const currentMenu = menu[keyMenu]
 
 	return (
 		<aside
@@ -19,13 +20,15 @@ const Sidebar: React.FC = () => {
 			<div className="no-scrollbar flex flex-col overflow-y-auto p-4">
 				<nav>
 					<ul className="mb-6 flex flex-col gap-1.5">
-						{menu[keyMenu].map((link) => (
-							<MenuLink
-								key={link.to}
-								link={link}
-								keyMenu={keyMenu}
-							/>
-						))}
+						{currentMenu &&
+							currentMenu.map((link) => (
+								<MenuLink
+									key={link.to}
+									link={link}
+									keyMenu={keyMenu}
+									pathname={pathname}
+								/>
+							))}
 					</ul>
 				</nav>
 			</div>

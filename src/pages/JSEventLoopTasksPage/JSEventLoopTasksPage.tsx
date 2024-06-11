@@ -1,13 +1,15 @@
-import React from 'react'
-import DefaultLayout from '../../layouts/DefaultLayout.tsx'
+import React, { useEffect } from 'react'
 import JSEventLoopTasks from '../../Modules/JSEventLoop/components/JSEventLoopTasks'
+import { useTitle } from '../../utils/helpers/TitleContext.tsx'
 
 const JSEventLoopTasksPage: React.FC = () => {
-	return (
-		<DefaultLayout title="Event Loop | Задачі">
-			<JSEventLoopTasks />
-		</DefaultLayout>
-	)
+	const { setTitle } = useTitle()
+
+	useEffect(() => {
+		setTitle('Задачі')
+	}, [setTitle])
+
+	return <JSEventLoopTasks />
 }
 
 export default JSEventLoopTasksPage

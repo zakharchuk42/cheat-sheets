@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTitle } from '../../utils/helpers/TitleContext.tsx'
 
-interface PageTitleProps {
-	title: string
-}
-
-const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
+const PageTitle: React.FC = () => {
 	const location = useLocation()
+	const { title } = useTitle()
 
 	useEffect(() => {
-		document.title = `Cheat Sheets | ${title}`
+		document.title = title
 	}, [location, title])
 
 	return null

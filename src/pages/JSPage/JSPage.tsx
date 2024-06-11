@@ -1,8 +1,14 @@
-import DefaultLayout from '../../layouts/DefaultLayout.tsx'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useTitle } from '../../utils/helpers/TitleContext.tsx'
 
 const JSPage: React.FC = () => {
-	return <DefaultLayout title="Java Script">JSPage</DefaultLayout>
+	const { setTitle } = useTitle()
+
+	useEffect(() => {
+		setTitle('Java Script')
+	}, [setTitle])
+
+	return <div>JS</div>
 }
 
 export default JSPage

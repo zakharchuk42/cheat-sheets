@@ -1,13 +1,15 @@
-import DefaultLayout from '../../layouts/DefaultLayout.tsx'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Main from '../../Modules/Main'
+import { useTitle } from '../../utils/helpers/TitleContext.tsx'
 
 const MainPage: React.FC = () => {
-	return (
-		<DefaultLayout title="Main Menu" withHeader={false}>
-			<Main />
-		</DefaultLayout>
-	)
+	const { setTitle } = useTitle()
+
+	useEffect(() => {
+		setTitle('Глобальне меню')
+	}, [setTitle])
+
+	return <Main />
 }
 
 export default MainPage

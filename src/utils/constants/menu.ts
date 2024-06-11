@@ -22,6 +22,10 @@ export const menu: MenuType = {
 					title: 'Приклади',
 				},
 				{
+					to: AppPages.JS_EVENT_LOOP_USEFUL,
+					title: 'Корисне',
+				},
+				{
 					to: AppPages.JS_EVENT_LOOP_TASKS,
 					title: 'Задачі',
 				},

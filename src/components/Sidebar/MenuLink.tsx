@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import s from './sidebar.module.scss'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Doc from '../../app/assets/doc.svg'
 import More from '../../app/assets/more-info.svg'
 import { ILinks } from '../../utils/constants/menu.ts'
@@ -9,18 +9,17 @@ import { iconMapper } from './constants.tsx'
 interface MenuLinkProps {
 	link: ILinks
 	keyMenu: string
+	pathname: string
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ link, keyMenu }) => {
-	const { pathname } = useLocation()
-
+const MenuLink: React.FC<MenuLinkProps> = ({ link, keyMenu, pathname }) => {
 	const [isShowSubLinks, setIsShowSubLinks] = useState(false)
 
 	useEffect(() => {
 		const pathArr = link.to.split('/')
 		const isActive = pathname.includes(pathArr[pathArr.length - 1])
 		setIsShowSubLinks(isActive)
-	}, [location, link.to])
+	}, [link.to, pathname])
 
 	const classNames = (isActive: boolean): string =>
 		`group relative flex font-medium duration-300 ease-in-out hover:text-yellow-500 ` +

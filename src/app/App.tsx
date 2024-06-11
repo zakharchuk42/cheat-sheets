@@ -6,6 +6,8 @@ import JSPage from '../pages/JSPage'
 import JSEventLoopPage from '../pages/JSEventLoopPage'
 import JSEventLoopExamplesPage from '../pages/JSEventLoopExamplesPage'
 import JSEventLoopTasksPage from '../pages/JSEventLoopTasksPage'
+import JSEventLoopUsefulPage from '../pages/JSEventLoopUsefulPage'
+import DefaultLayout from '../layouts/DefaultLayout.tsx'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -15,7 +17,7 @@ export const App: React.FC = () => {
 	}, [pathname])
 
 	return (
-		<>
+		<DefaultLayout>
 			<Routes>
 				<Route index element={<MainPage />} />
 				<Route path={AppPages.JS} element={<JSPage />} />
@@ -31,7 +33,11 @@ export const App: React.FC = () => {
 					path={AppPages.JS_EVENT_LOOP_TASKS}
 					element={<JSEventLoopTasksPage />}
 				/>
+				<Route
+					path={AppPages.JS_EVENT_LOOP_USEFUL}
+					element={<JSEventLoopUsefulPage />}
+				/>
 			</Routes>
-		</>
+		</DefaultLayout>
 	)
 }
