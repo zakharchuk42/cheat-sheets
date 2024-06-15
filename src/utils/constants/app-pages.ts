@@ -11,6 +11,7 @@ export const AppPages = {
 	JS_ARRAY_METHODS: '/js/array-methods',
 	JS_EVENTS: '/js/events',
 	JS_LOCAL_STORAGE: '/js/local-storage',
+	JS_LOCAL_STORAGE_EXAMPLES: '/js/local-storage/examples',
 	CSS: '/css',
 	REACT: '/react',
 	TS: '/ts',

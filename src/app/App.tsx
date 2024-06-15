@@ -14,6 +14,7 @@ import JSEventLoopExamplesPage from '../pages/JSEnvironmentExamplesPage'
 import JSArrayMethodsPage from '../pages/JSArrayMethodsPage'
 import JSEventsPage from '../pages/JSEventsPage'
 import JSLocalStoragePage from '../pages/JSLocalStoragePage'
+import JSLocalStorageExamplesPage from '../pages/JSLocalStorageExamplesPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -63,6 +64,10 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_LOCAL_STORAGE}
 					element={<JSLocalStoragePage />}
+				/>
+				<Route
+					path={AppPages.JS_LOCAL_STORAGE_EXAMPLES}
+					element={<JSLocalStorageExamplesPage />}
 				/>
 			</Routes>
 		</DefaultLayout>
