@@ -6,7 +6,10 @@ export const JSEvents: React.FC = () => {
 		<div className="flex flex-col gap-8">
 			{jsEvents.map((item) => {
 				return (
-					<div className="flex flex-col md:flex-row md:items-center">
+					<div
+						className="flex flex-col md:flex-row md:items-center"
+						key={item.text}
+					>
 						<div className="text-2xl font-bold w-[180px]">
 							{item.name}
 						</div>
