@@ -12,6 +12,7 @@ import JSEnvironmentPage from '../pages/JSEnvironmentPage'
 import JSEnvironmentTasksPage from '../pages/JSEnvironmentTasksPage'
 import JSEventLoopExamplesPage from '../pages/JSEnvironmentExamplesPage'
 import JSArrayMethodsPage from '../pages/JSArrayMethodsPage'
+import JSEventsPage from '../pages/JSEventsPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -57,6 +58,7 @@ export const App: React.FC = () => {
 					path={AppPages.JS_ARRAY_METHODS}
 					element={<JSArrayMethodsPage />}
 				/>
+				<Route path={AppPages.JS_EVENTS} element={<JSEventsPage />} />
 			</Routes>
 		</DefaultLayout>
 	)

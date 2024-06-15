@@ -9,6 +9,7 @@ export const AppPages = {
 	JS_ENVIRONMENT_EXAMPLES: '/js/environment/examples',
 	JS_ENVIRONMENT_TASKS: '/js/environment/tasks',
 	JS_ARRAY_METHODS: '/js/array-methods',
+	JS_EVENTS: '/js/events',
 	CSS: '/css',
 	REACT: '/react',
 	TS: '/ts',

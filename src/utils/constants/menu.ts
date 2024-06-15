@@ -49,5 +49,9 @@ export const menu: MenuType = {
 			to: AppPages.JS_ARRAY_METHODS,
 			title: 'Методи масиву',
 		},
+		{
+			to: AppPages.JS_EVENTS,
+			title: 'JS Events',
+		},
 	],
 }
