@@ -51,7 +51,7 @@ export const menu: MenuType = {
 		},
 		{
 			to: AppPages.JS_EVENTS,
-			title: 'JS Events',
+			title: 'Events',
 		},
 		{
 			to: AppPages.JS_LOCAL_STORAGE,
@@ -62,6 +62,10 @@ export const menu: MenuType = {
 					title: 'Приклади',
 				},
 			],
+		},
+		{
+			to: AppPages.JS_OBJECT,
+			title: 'Обʼєкти',
 		},
 	],
 }

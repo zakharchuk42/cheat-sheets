@@ -22,7 +22,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ link, keyMenu, pathname }) => {
 	const icon = iconMapper[keyMenu]
 
 	const classNames = (isActive: boolean): string =>
-		`group relative flex items-center font-medium duration-300 ease-in-out hover:text-yellow-500 ` +
+		`group inline-flex items-center relative duration-300 ease-in-out hover:text-yellow-500 ` +
 		(isActive && '!text-yellow-500')
 
 	return (
