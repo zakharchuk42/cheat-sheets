@@ -16,6 +16,8 @@ import JSArrayMethodsPage from '../pages/js/ArrayMethodsPage'
 import JSEventsPage from '../pages/js/EventsPage'
 import JSLocalStoragePage from '../pages/js/LocalStoragePage'
 import JSObjectPage from '../pages/js/ObjectPage'
+import JSLogicOperatorsPage from '../pages/js/logic-operators/LogicOperatorsPage'
+import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/LogicOperatorsTasks'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -67,6 +69,14 @@ export const App: React.FC = () => {
 					element={<JSLocalStoragePage />}
 				/>
 				<Route path={AppPages.JS_OBJECT} element={<JSObjectPage />} />
+				<Route
+					path={AppPages.JS_LOGIC_OPERATORS}
+					element={<JSLogicOperatorsPage />}
+				/>
+				<Route
+					path={AppPages.JS_LOGIC_OPERATORS_TASKS}
+					element={<JSLogicOperatorsTasksPage />}
+				/>
 			</Routes>
 		</DefaultLayout>
 	)

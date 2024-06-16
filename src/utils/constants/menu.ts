@@ -62,8 +62,14 @@ export const menu: MenuType = {
 			title: 'Обʼєкти',
 		},
 		{
-			to: '',
+			to: AppPages.JS_LOGIC_OPERATORS,
 			title: 'Логічні оператори',
+			subLinks: [
+				{
+					to: AppPages.JS_LOGIC_OPERATORS_TASKS,
+					title: 'Задачі',
+				},
+			],
 		},
 		{
 			to: '',
