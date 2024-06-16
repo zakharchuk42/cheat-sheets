@@ -56,16 +56,18 @@ export const menu: MenuType = {
 		{
 			to: AppPages.JS_LOCAL_STORAGE,
 			title: 'Local Storage',
-			subLinks: [
-				{
-					to: AppPages.JS_LOCAL_STORAGE_EXAMPLES,
-					title: 'Приклади',
-				},
-			],
 		},
 		{
 			to: AppPages.JS_OBJECT,
 			title: 'Обʼєкти',
+		},
+		{
+			to: '',
+			title: 'Логічні оператори',
+		},
+		{
+			to: '',
+			title: 'prototype, __proto__',
 		},
 	],
 }

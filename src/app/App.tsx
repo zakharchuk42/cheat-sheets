@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import MainPage from '../pages/MainPage'
+import MainPage from '../pages'
 import { AppPages } from '../utils/constants/app-pages.ts'
-import JSPage from '../pages/JSPage'
-import JSEventLoopPage from '../pages/JSEventLoopPage'
-import JSEnvironmentExamplesPage from '../pages/JSEventLoopExamplesPage'
-import JSEventLoopTasksPage from '../pages/JSEventLoopTasksPage'
-import JSEventLoopUsefulPage from '../pages/JSEventLoopUsefulPage'
+import JSPage from '../pages/js'
+
 import DefaultLayout from '../layouts/DefaultLayout.tsx'
-import JSEnvironmentPage from '../pages/JSEnvironmentPage'
-import JSEnvironmentTasksPage from '../pages/JSEnvironmentTasksPage'
-import JSEventLoopExamplesPage from '../pages/JSEnvironmentExamplesPage'
-import JSArrayMethodsPage from '../pages/JSArrayMethodsPage'
-import JSEventsPage from '../pages/JSEventsPage'
-import JSLocalStoragePage from '../pages/JSLocalStoragePage'
-import JSLocalStorageExamplesPage from '../pages/JSLocalStorageExamplesPage'
-import JSObjectPage from '../pages/JSObjectPage'
+import JSEventLoopPage from '../pages/js/event-loop/EventLoopPage'
+import JSEventLoopExamplesPage from '../pages/js/event-loop/ExamplesPage'
+import JSEventLoopTasksPage from '../pages/js/event-loop/TasksPage'
+import JSEventLoopUsefulPage from '../pages/js/event-loop/UsefulPage'
+import JSEnvironmentPage from '../pages/js/environment/EnvironmentPage'
+import JSEnvironmentExamplesPage from '../pages/js/environment/ExamplesPage'
+import JSEnvironmentTasksPage from '../pages/js/environment/TasksPage'
+import JSArrayMethodsPage from '../pages/js/ArrayMethodsPage'
+import JSEventsPage from '../pages/js/EventsPage'
+import JSLocalStoragePage from '../pages/js/LocalStoragePage'
+import JSObjectPage from '../pages/js/ObjectPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -65,10 +65,6 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_LOCAL_STORAGE}
 					element={<JSLocalStoragePage />}
-				/>
-				<Route
-					path={AppPages.JS_LOCAL_STORAGE_EXAMPLES}
-					element={<JSLocalStorageExamplesPage />}
 				/>
 				<Route path={AppPages.JS_OBJECT} element={<JSObjectPage />} />
 			</Routes>
