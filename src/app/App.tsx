@@ -17,7 +17,7 @@ import JSEventsPage from '../pages/js/EventsPage'
 import JSLocalStoragePage from '../pages/js/LocalStoragePage'
 import JSObjectPage from '../pages/js/ObjectPage'
 import JSLogicOperatorsPage from '../pages/js/logic-operators/LogicOperatorsPage'
-import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/LogicOperatorsTasks'
+import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/TasksPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
