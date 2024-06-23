@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import Title from '../../../components/Typography'
+import { useTitle } from '../../../utils/helpers/TitleContext.tsx'
 
 interface JsObjectProps {}
 
 const JSObjectPage: React.FC<JsObjectProps> = () => {
+	const { setTitle } = useTitle()
+
+	useEffect(() => {
+		setTitle('Обʼєкти')
+	}, [setTitle])
 	return (
 		<>
 			<p>

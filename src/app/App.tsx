@@ -18,6 +18,7 @@ import JSLocalStoragePage from '../pages/js/LocalStoragePage'
 import JSObjectPage from '../pages/js/ObjectPage'
 import JSLogicOperatorsPage from '../pages/js/logic-operators/LogicOperatorsPage'
 import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/TasksPage'
+import JSVariablesPage from '../pages/js/VariablesPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -46,6 +47,10 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_EVENT_LOOP_USEFUL}
 					element={<JSEventLoopUsefulPage />}
+				/>
+				<Route
+					path={AppPages.JS_VARIABLES}
+					element={<JSVariablesPage />}
 				/>
 				<Route
 					path={AppPages.JS_ENVIRONMENT}

@@ -32,6 +32,10 @@ export const menu: MenuType = {
 			],
 		},
 		{
+			to: AppPages.JS_VARIABLES,
+			title: 'Змінні: var, let, const',
+		},
+		{
 			to: AppPages.JS_ENVIRONMENT,
 			title: 'Область видимості, замикання',
 			subLinks: [
