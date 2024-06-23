@@ -1,99 +1,142 @@
 export const codeExample = [
 	{
-		code: `console.log('start');
+		code: `var globalVar = 'I am global';
 
-setTimeout(() => {
-  console.log('macrotask');
-}, 0);
+function displayGlobalVar() {
+    console.log(globalVar);
+}
 
-console.log('end');
+displayGlobalVar(); // I am global
+console.log(globalVar); // I am global
 `,
-		answer: `start => end => macrotask`,
 	},
 	{
-		code: `setTimeout(function timeout() {
- console.log('macrotask');
- }, 0);
+		code: `function localScopeExample() {
+    var localVar = 'I am local';
+    console.log(localVar);
+}
 
-let p = new Promise(function(resolve, reject) {
- console.log('Created promise');
- resolve();
- });
-
-p.then(function(){
- console.log('microtask');
- });
-
-console.log('end');`,
-		answer: 'created promise => end => microtask => macrotask',
+localScopeExample(); // I am local
+console.log(localVar); // ReferenceError: localVar is not defined`,
 	},
 	{
-		code: `console.log('start');
+		code: `if (true) {
+    let blockVar = 'I am block-scoped';
+    console.log(blockVar); // I am block-scoped
+}
 
-setTimeout(() => {
-  console.log('macrotask');
-}, 0);
-
-Promise.resolve().then(() => {
-  console.log('microtask');
-});
-
-console.log('end');
+console.log(blockVar); // ReferenceError: blockVar is not defined
 `,
-		answer: `start => end => microtask => macrotask`,
 	},
 	{
-		code: `console.log('start');
+		code: `function outerFunction() {
+    var outerVar = 'I am outer';
 
-setTimeout(() => {
-  console.log('first macrotask');
+    function innerFunction() {
+        var innerVar = 'I am inner';
+        console.log(outerVar); // I am outer
+        console.log(innerVar); // I am inner
+    }
 
-  Promise.resolve().then(() => {
-    console.log('microtask inside first macrotask');
-  });
-}, 0);
+    innerFunction();
+    console.log(innerVar); // ReferenceError: innerVar is not defined
+}
 
-Promise.resolve().then(() => {
-  console.log('first microtask');
-});
-
-setTimeout(() => {
-  console.log('second macrotask');
-}, 0);
-
-console.log('end');
+outerFunction();
 `,
-		answer: `start => end => first microtask => first macrotask => microtask inside first macrotask => second macrotask`,
 	},
 	{
-		code: `console.log('start');
+		code: `function createCounter() {
+    let count = 0;
 
-setTimeout(() => {
-  console.log('first macrotask');
+    return function() {
+        count += 1;
+        return count;
+    };
+}
 
-  Promise.resolve().then(() => {
-    console.log('first microtask inside first macrotask');
-  });
-
-  Promise.resolve().then(() => {
-    console.log('second microtask inside first macrotask');
-  });
-}, 0);
-
-Promise.resolve().then(() => {
-  console.log('first microtask');
-});
-
-setTimeout(() => {
-  console.log('second macrotask');
-
-  Promise.resolve().then(() => {
-    console.log('microtask inside second macrotask');
-  });
-}, 0);
-
-console.log('end');
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
 `,
-		answer: `start => end => first microtask => first macrotask => first microtask inside first macrotask => second microtask inside first macrotask => second macrotask => microtask inside second macrotask`,
+	},
+	{
+		code: `function createCounters() {
+    var counters = [];
+    for (var i = 0; i < 5; i++) {
+        (function(i) {
+            counters.push(function() {
+                return i;
+            });
+        })(i);
+    }
+    return counters;
+}
+
+const counters = createCounters();
+console.log(counters[0]()); // 0
+console.log(counters[1]()); // 1
+console.log(counters[2]()); // 2
+console.log(counters[3]()); // 3
+console.log(counters[4]()); // 4
+`,
+	},
+	{
+		code: `function createPerson(name) {
+    var personName = name;
+
+    return {
+        getName: function() {
+            return personName;
+        },
+        setName: function(newName) {
+            personName = newName;
+        }
+    };
+}
+
+const person = createPerson('John');
+console.log(person.getName()); // John
+person.setName('Doe');
+console.log(person.getName()); // Doe
+`,
+	},
+	{
+		code: `function createAdder(x) {
+    return function(y) {
+        return x + y;
+    };
+}
+
+const add5 = createAdder(5);
+console.log(add5(2)); // 7
+console.log(add5(10)); // 15
+`,
+	},
+	{
+		code: `const CounterModule = (function() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            count += 1;
+            return count;
+        },
+        decrement: function() {
+            count -= 1;
+            return count;
+        },
+        getCount: function() {
+            return count;
+        }
+    };
+})();
+
+console.log(CounterModule.increment()); // 1
+console.log(CounterModule.increment()); // 2
+console.log(CounterModule.getCount()); // 2
+console.log(CounterModule.decrement()); // 1
+`,
 	},
 ]
