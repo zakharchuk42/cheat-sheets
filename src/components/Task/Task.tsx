@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import Button from '../../../../../../components/Button'
+import Button from '../Button'
 
 interface TaskProps {
-	task: {
-		code: string
-		answer: string
-		expl?: string
-	}
+	code: string
+	answer: string
+	expl?: string
 	id: number
 }
 
-const LogicOperatorsTask: React.FC<TaskProps> = ({ task, id }) => {
+const Task: React.FC<TaskProps> = ({ code, answer, expl, id }) => {
 	const [isShowAnswer, setIsShowAnswer] = useState(false)
 
 	const handleAnswer = () => {
@@ -21,15 +19,13 @@ const LogicOperatorsTask: React.FC<TaskProps> = ({ task, id }) => {
 	return (
 		<div className="pb-4">
 			<strong>#{id + 1}</strong>
-			<SyntaxHighlighter language="javascript">
-				{task.code}
-			</SyntaxHighlighter>
+			<SyntaxHighlighter language="javascript">{code}</SyntaxHighlighter>
 
 			<div className="flex items-center justify-between">
 				<div className="flex items-center gap-2">
 					<strong>Відповідь:</strong>
 					{isShowAnswer ? (
-						task.answer
+						answer
 					) : (
 						<div
 							key={id}
@@ -55,9 +51,9 @@ const LogicOperatorsTask: React.FC<TaskProps> = ({ task, id }) => {
 					Показати відповідь
 				</Button>
 			</div>
-			<p>{task.expl && isShowAnswer && <p>{task.expl}</p>}</p>
+			<p>{expl && isShowAnswer && <p>{expl}</p>}</p>
 		</div>
 	)
 }
 
-export default LogicOperatorsTask
+export default Task
