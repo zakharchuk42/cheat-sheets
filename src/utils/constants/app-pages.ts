@@ -14,6 +14,8 @@ export const AppPages = {
 	JS_LOCAL_STORAGE: '/js/local-storage',
 	JS_LOGIC_OPERATORS: '/js/logic-operators',
 	JS_LOGIC_OPERATORS_TASKS: '/js/logic-operators/tasks',
+	JS_PROTOTYPE: '/js/prototype',
+	JS_DATA_TYPES: '/js/data-types',
 	JS_OBJECT: '/js/object',
 	CSS: '/css',
 	REACT: '/react',

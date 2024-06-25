@@ -76,8 +76,12 @@ export const menu: MenuType = {
 			],
 		},
 		{
-			to: '',
+			to: AppPages.JS_PROTOTYPE,
 			title: 'prototype, __proto__',
+		},
+		{
+			to: AppPages.JS_DATA_TYPES,
+			title: 'Типи даних',
 		},
 	],
 }

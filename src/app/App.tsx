@@ -19,6 +19,8 @@ import JSObjectPage from '../pages/js/ObjectPage'
 import JSLogicOperatorsPage from '../pages/js/logic-operators/LogicOperatorsPage'
 import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/TasksPage'
 import JSVariablesPage from '../pages/js/VariablesPage'
+import JSPrototypePage from '../pages/js/PrototypePage'
+import JSDataTypesPage from '../pages/js/DataTypes/JSDataTypesPage.tsx'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -81,6 +83,14 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_LOGIC_OPERATORS_TASKS}
 					element={<JSLogicOperatorsTasksPage />}
+				/>
+				<Route
+					path={AppPages.JS_PROTOTYPE}
+					element={<JSPrototypePage />}
+				/>
+				<Route
+					path={AppPages.JS_DATA_TYPES}
+					element={<JSDataTypesPage />}
 				/>
 			</Routes>
 		</DefaultLayout>
