@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useTitle } from '../../../../utils/helpers/TitleContext.tsx'
 import Title from '../../../../components/Typography'
 import EventLoop from '../../../../app/assets/event-loop.gif'
+import AccentBlock from '../../../../components/AccentBlock'
+import ExternalLink from '../../../../components/ExternalLink'
 
 const JSEventLoopPage: React.FC = () => {
 	const { setTitle } = useTitle()
@@ -27,12 +29,12 @@ const JSEventLoopPage: React.FC = () => {
 				операцію в чергу (queue) і продовжує виконувати інші команди.
 			</p>
 			<p>
-				<strong>Call stack</strong> — це структура даних, яка зберігає
-				інформацію про активні виконувані функції. Коли функція
-				викликається, вона додається у верхню частину стека. Коли
-				функція завершена, вона видаляється зі стека. Це працює як
-				принцип LIFO (Last In, First Out), де остання додана функція є
-				першою, яка виконується до кінця.
+				<strong>Call stack (Execution Context Stack)</strong> — це
+				структура даних, яка зберігає інформацію про активні виконувані
+				функції. Коли функція викликається, вона додається у верхню
+				частину стека. Коли функція завершена, вона видаляється зі
+				стека. Це працює як принцип LIFO (Last In, First Out), де
+				остання додана функція є першою, яка виконується до кінця.
 			</p>
 			<p>
 				<strong>Microtasks</strong> — це завдання, які виконуються після
@@ -75,6 +77,43 @@ const JSEventLoopPage: React.FC = () => {
 				</li>
 			</ul>
 			<img className="mt-4" src={EventLoop} alt="Event Loop Schema" />
+			<p></p>
+			<Title
+				text="Call stack та Execution Context
+					Stack"
+			/>
+			<p>
+				Як такого поняття чи концепції <strong>Call stack</strong> в
+				Java Script не існує. Цей термінь є калької з інших
+				низькорівневих мов програмування де саме за допомогою логіки
+				Call stack процессор виконує свої інструкції. За специфікацією
+				JS працює за допомогою Execution Context Stack.
+			</p>
+			<p>
+				<strong>Execution context</strong> - є абстрактною концепцією
+				середовища, в якому виконується код. Кожен раз, коли виконується
+				функція, скрипт чи блок коду, створюється новий контекст
+				виконання.
+			</p>
+			<p>
+				Ключова різниця між <strong>Call stack</strong> та{' '}
+				<strong>Execution context stack</strong> у тому, що під час
+				виконання глобального Main Execution context любий Execution
+				context може бути замороженим (suspend), відкладеним на потім,
+				видаленим зі stack на певний час, а потім повернутий назад в
+				stack.
+			</p>
+			<AccentBlock>
+				<p>
+					<strong>Джерело:</strong>{' '}
+					<ExternalLink
+						href={'https://www.youtube.com/live/CE0BhheYFQk'}
+						text={
+							'JavaScript и Call Stack согласно официальной спецификации'
+						}
+					/>
+				</p>
+			</AccentBlock>
 		</>
 	)
 }
