@@ -104,15 +104,13 @@ const JSEventLoopPage: React.FC = () => {
 				stack.
 			</p>
 			<AccentBlock>
-				<p>
-					<strong>Джерело:</strong>{' '}
-					<ExternalLink
-						href={'https://www.youtube.com/live/CE0BhheYFQk'}
-						text={
-							'JavaScript и Call Stack согласно официальной спецификации'
-						}
-					/>
-				</p>
+				<strong>Джерело:</strong>{' '}
+				<ExternalLink
+					href={'https://www.youtube.com/live/CE0BhheYFQk'}
+					text={
+						'JavaScript и Call Stack согласно официальной спецификации'
+					}
+				/>
 			</AccentBlock>
 		</>
 	)

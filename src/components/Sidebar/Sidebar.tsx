@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { menu } from '../../utils/constants/menu.ts'
 import Logo from './Logo.tsx'
 import MenuLink from './MenuLink.tsx'
+import SocialsBlock from '../SocialsBlock'
 
 const Sidebar: React.FC = () => {
 	const { pathname } = useLocation()
@@ -17,7 +18,7 @@ const Sidebar: React.FC = () => {
 			<div className="flex items-center justify-center min-h-[81px] gap-2 px-4 md:px-6 2xl:px-10 py-4 border-b">
 				<Logo />
 			</div>
-			<div className="no-scrollbar flex flex-col overflow-y-auto p-4">
+			<div className="no-scrollbar flex flex-col flex-grow overflow-y-auto p-4">
 				<nav>
 					<ul className="mb-6 flex flex-col gap-1.5">
 						{currentMenu &&
@@ -32,6 +33,7 @@ const Sidebar: React.FC = () => {
 					</ul>
 				</nav>
 			</div>
+			<SocialsBlock />
 		</aside>
 	)
 }
