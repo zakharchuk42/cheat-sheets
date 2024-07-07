@@ -21,6 +21,7 @@ import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/TasksPage'
 import JSVariablesPage from '../pages/js/VariablesPage'
 import JSPrototypePage from '../pages/js/PrototypePage'
 import JSDataTypesPage from '../pages/js/DataTypes/JSDataTypesPage.tsx'
+import JSHowBrowserWork from '../pages/js/HowBrowserWork'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -91,6 +92,10 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_DATA_TYPES}
 					element={<JSDataTypesPage />}
+				/>
+				<Route
+					path={AppPages.JS_HOW_BROWSER_WORK}
+					element={<JSHowBrowserWork />}
 				/>
 			</Routes>
 		</DefaultLayout>

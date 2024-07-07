@@ -32,8 +32,24 @@ export const menu: MenuType = {
 			],
 		},
 		{
+			to: AppPages.JS_EVENTS,
+			title: 'Events',
+		},
+		{
+			to: AppPages.JS_LOCAL_STORAGE,
+			title: 'Local Storage',
+		},
+		{
+			to: AppPages.JS_PROTOTYPE,
+			title: 'prototype, __proto__',
+		},
+		{
 			to: AppPages.JS_VARIABLES,
 			title: 'Змінні: var, let, const',
+		},
+		{
+			to: AppPages.JS_ARRAY_METHODS,
+			title: 'Методи масиву',
 		},
 		{
 			to: AppPages.JS_ENVIRONMENT,
@@ -49,18 +65,7 @@ export const menu: MenuType = {
 				},
 			],
 		},
-		{
-			to: AppPages.JS_ARRAY_METHODS,
-			title: 'Методи масиву',
-		},
-		{
-			to: AppPages.JS_EVENTS,
-			title: 'Events',
-		},
-		{
-			to: AppPages.JS_LOCAL_STORAGE,
-			title: 'Local Storage',
-		},
+
 		{
 			to: AppPages.JS_OBJECT,
 			title: 'Обʼєкти',
@@ -76,12 +81,12 @@ export const menu: MenuType = {
 			],
 		},
 		{
-			to: AppPages.JS_PROTOTYPE,
-			title: 'prototype, __proto__',
-		},
-		{
 			to: AppPages.JS_DATA_TYPES,
 			title: 'Типи даних',
+		},
+		{
+			to: AppPages.JS_HOW_BROWSER_WORK,
+			title: 'Як працює браузер',
 		},
 	],
 }
