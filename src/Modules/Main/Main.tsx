@@ -37,14 +37,25 @@ function LinkComponent({
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 			style={{
-				color: link.color,
 				border: `1px solid ${link.color}`,
 				fill: link.color,
-				...(isHovered && { background: link.color, color: 'white' }),
+				...(isHovered && { background: link.color }),
 			}}
 		>
-			{link.title}
 			{link.icon}
+			<span
+				className="z-10"
+				style={{
+					color: '#000',
+					transition: 'all .3s ease',
+					...(isHovered && {
+						transform: 'scale(1.6)',
+						color: 'white',
+					}),
+				}}
+			>
+				{link.title}
+			</span>
 		</NavLink>
 	)
 }

@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
@@ -12,6 +12,20 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
 	const { pathname } = useLocation()
 
 	const [sidebarOpen, setSidebarOpen] = useState<boolean>(true)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setSidebarOpen(window.innerWidth >= 768)
+		}
+
+		window.addEventListener('resize', handleResize)
+
+		handleResize()
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
 
 	const toggleOpen = () => {
 		setSidebarOpen((prevState) => !prevState)

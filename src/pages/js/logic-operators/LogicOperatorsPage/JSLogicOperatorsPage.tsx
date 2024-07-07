@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useTitle } from '../../../../utils/helpers/TitleContext.tsx'
 import Title from '../../../../components/Typography'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import AccentBlock from '../../../../components/AccentBlock'
 
 interface JsLogicOperatorsPageProps {}
 
@@ -14,6 +15,12 @@ const LogicOperatorsPage: React.FC<JsLogicOperatorsPageProps> = () => {
 
 	return (
 		<>
+			<AccentBlock>
+				Ключовий момент: дані в логічних операторех перетворюються в
+				boolean за допомогою ToBoolean() для перевірки, але повертається
+				знчення яке ми порівнюємо
+			</AccentBlock>
+			<p></p>
 			<Title text="|| (АБО)" />
 			<p>
 				АБО "||" знаходить перше правдиве значення. Це означає, що
