@@ -76,7 +76,7 @@ const JSVariablesPage: React.FC<JsVariablesPageProps> = () => {
 			<SyntaxHighlighter language="javascript">
 				{`{
 	// початок TDZ
-	const show = () => console.log(l1)
+	const show = (l1) => console.log(l1)
 	
 	// кінець TDZ
 	let test = 'text'
