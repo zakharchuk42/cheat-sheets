@@ -7,7 +7,7 @@ const JSEnvironmentTasksPage: React.FC = () => {
 	const { setTitle } = useTitle()
 
 	useEffect(() => {
-		setTitle('Задачі')
+		setTitle('Задачі environment')
 	}, [setTitle])
 
 	return (

@@ -3,6 +3,7 @@ import { AppPages } from './app-pages.ts'
 export interface ILinks {
 	to: string
 	title: string
+	skip?: boolean
 	subLinks?: {
 		to: string
 		title: string
@@ -46,6 +47,17 @@ export const menu: MenuType = {
 		{
 			to: AppPages.JS_VARIABLES,
 			title: 'Змінні: var, let, const',
+		},
+		{
+			to: AppPages.JS_THIS,
+			title: 'this',
+			skip: true,
+			subLinks: [
+				{
+					to: AppPages.JS_THIS_TASKS,
+					title: 'Задачі',
+				},
+			],
 		},
 		{
 			to: AppPages.JS_ARRAY_METHODS,

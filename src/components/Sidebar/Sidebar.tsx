@@ -22,14 +22,16 @@ const Sidebar: React.FC = () => {
 				<nav>
 					<ul className="mb-6 flex flex-col gap-1.5">
 						{currentMenu &&
-							currentMenu.map((link) => (
-								<MenuLink
-									key={link.to}
-									link={link}
-									keyMenu={keyMenu}
-									pathname={pathname}
-								/>
-							))}
+							currentMenu.map((link) =>
+								link.skip ? null : (
+									<MenuLink
+										key={link.to}
+										link={link}
+										keyMenu={keyMenu}
+										pathname={pathname}
+									/>
+								)
+							)}
 					</ul>
 				</nav>
 			</div>

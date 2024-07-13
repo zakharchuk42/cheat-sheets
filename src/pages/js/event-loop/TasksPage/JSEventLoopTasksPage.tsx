@@ -7,7 +7,7 @@ const JSEventLoopTasksPage: React.FC = () => {
 	const { setTitle } = useTitle()
 
 	useEffect(() => {
-		setTitle('Задачі')
+		setTitle('Задачі Event Loop')
 	}, [setTitle])
 
 	return (
