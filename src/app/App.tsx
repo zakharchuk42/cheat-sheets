@@ -24,6 +24,7 @@ import JSDataTypesPage from '../pages/js/DataTypes/JSDataTypesPage.tsx'
 import JSHowBrowserWorkPage from '../pages/js/HowBrowserWorkPage'
 import JSThisPage from '../pages/js/this/ThisPage/JSThisPage.tsx'
 import JSThisTasksPage from '../pages/js/this/TasksPage'
+import HotKeysPage from '../pages/hotKeys'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -36,6 +37,7 @@ export const App: React.FC = () => {
 		<DefaultLayout>
 			<Routes>
 				<Route index element={<MainPage />} />
+				<Route path={AppPages.HOT_KEYS} element={<HotKeysPage />} />
 				<Route path={AppPages.JS} element={<JSPage />} />
 				<Route
 					path={AppPages.JS_EVENT_LOOP}

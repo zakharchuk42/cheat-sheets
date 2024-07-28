@@ -1,0 +1,17 @@
+.wrapper {
+    display: inline-flex;
+    width: 73px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gainsboro;
+    background: #f3f4f6;
+    border-radius: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}

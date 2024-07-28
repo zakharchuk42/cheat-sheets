@@ -1,5 +1,6 @@
 export const AppPages = {
 	MAIN: '/',
+	HOT_KEYS: '/hot-keys',
 	JS: '/js',
 	JS_EVENT_LOOP: '/js/event-loop',
 	JS_EVENT_LOOP_EXAMPLES: '/js/event-loop/examples',
