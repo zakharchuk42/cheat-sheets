@@ -51,7 +51,6 @@ export const menu: MenuType = {
 		{
 			to: AppPages.JS_THIS,
 			title: 'this',
-			skip: true,
 			subLinks: [
 				{
 					to: AppPages.JS_THIS_TASKS,
@@ -81,6 +80,12 @@ export const menu: MenuType = {
 		{
 			to: AppPages.JS_OBJECT,
 			title: 'Обʼєкти',
+			subLinks: [
+				{
+					to: AppPages.JS_OBJECT_METHODS,
+					title: 'Методи',
+				},
+			],
 		},
 		{
 			to: AppPages.JS_LOGIC_OPERATORS,

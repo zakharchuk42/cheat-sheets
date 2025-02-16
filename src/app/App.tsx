@@ -15,7 +15,7 @@ import JSEnvironmentTasksPage from '../pages/js/environment/TasksPage'
 import JSArrayMethodsPage from '../pages/js/ArrayMethodsPage'
 import JSEventsPage from '../pages/js/EventsPage'
 import JSLocalStoragePage from '../pages/js/LocalStoragePage'
-import JSObjectPage from '../pages/js/ObjectPage'
+import JSObjectPage from '../pages/js/objects/ObjectPage'
 import JSLogicOperatorsPage from '../pages/js/logic-operators/LogicOperatorsPage'
 import JSLogicOperatorsTasksPage from '../pages/js/logic-operators/TasksPage'
 import JSVariablesPage from '../pages/js/VariablesPage'
@@ -25,6 +25,7 @@ import JSHowBrowserWorkPage from '../pages/js/HowBrowserWorkPage'
 import JSThisPage from '../pages/js/this/ThisPage/JSThisPage.tsx'
 import JSThisTasksPage from '../pages/js/this/TasksPage'
 import HotKeysPage from '../pages/hotKeys'
+import JSObjectMethodsPage from '../pages/js/objects/ObjectMethodsPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -81,6 +82,10 @@ export const App: React.FC = () => {
 					element={<JSLocalStoragePage />}
 				/>
 				<Route path={AppPages.JS_OBJECT} element={<JSObjectPage />} />
+				<Route
+					path={AppPages.JS_OBJECT_METHODS}
+					element={<JSObjectMethodsPage />}
+				/>
 				<Route
 					path={AppPages.JS_LOGIC_OPERATORS}
 					element={<JSLogicOperatorsPage />}

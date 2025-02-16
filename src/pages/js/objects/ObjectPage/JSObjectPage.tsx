@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import Title from '../../../components/Typography'
-import { useTitle } from '../../../utils/helpers/TitleContext.tsx'
+import Title from '../../../../components/Typography'
+import { useTitle } from '../../../../utils/helpers/TitleContext.tsx'
 
 interface JsObjectProps {}
 

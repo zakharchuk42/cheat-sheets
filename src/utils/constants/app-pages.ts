@@ -18,6 +18,7 @@ export const AppPages = {
 	JS_PROTOTYPE: '/js/prototype',
 	JS_DATA_TYPES: '/js/data-types',
 	JS_OBJECT: '/js/object',
+	JS_OBJECT_METHODS: '/js/object-methods',
 	JS_HOW_BROWSER_WORK: '/js/how-browser-work',
 	JS_THIS: '/js/this',
 	JS_THIS_TASKS: '/js/this/tasks',
