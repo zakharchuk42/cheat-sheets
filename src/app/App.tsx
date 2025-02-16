@@ -26,6 +26,9 @@ import JSThisPage from '../pages/js/this/ThisPage/JSThisPage.tsx'
 import JSThisTasksPage from '../pages/js/this/TasksPage'
 import HotKeysPage from '../pages/hotKeys'
 import JSObjectMethodsPage from '../pages/js/objects/ObjectMethodsPage'
+import CSSPage from '../pages/css'
+import CSSCursorPage from '../pages/css/Cursor'
+import CSSTruncateTextPage from '../pages/css/TruncateTextPage'
 
 export const App: React.FC = () => {
 	const { pathname } = useLocation()
@@ -110,6 +113,13 @@ export const App: React.FC = () => {
 				<Route
 					path={AppPages.JS_THIS_TASKS}
 					element={<JSThisTasksPage />}
+				/>
+				{/*CSS*/}
+				<Route path={AppPages.CSS} element={<CSSPage />} />
+				<Route path={AppPages.CSS_CURSOR} element={<CSSCursorPage />} />
+				<Route
+					path={AppPages.CSS_TRUNCATED_TEXT}
+					element={<CSSTruncateTextPage />}
 				/>
 			</Routes>
 		</DefaultLayout>

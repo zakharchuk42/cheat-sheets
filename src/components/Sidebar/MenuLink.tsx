@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import s from './sidebar.module.scss'
 import { NavLink } from 'react-router-dom'
 import { ILinks } from '../../utils/constants/menu.ts'
-import { iconMapper } from './constants.tsx'
+import { colorMapper, iconMapper } from './constants.tsx'
 
 interface MenuLinkProps {
 	link: ILinks
@@ -20,10 +20,11 @@ const MenuLink: React.FC<MenuLinkProps> = ({ link, keyMenu, pathname }) => {
 	}, [link.to, pathname])
 
 	const icon = iconMapper[keyMenu]
+	const color = colorMapper[keyMenu]
 
 	const classNames = (isActive: boolean): string =>
-		`group inline-flex items-center relative duration-300 ease-in-out hover:text-yellow-500 ` +
-		(isActive && '!text-yellow-500')
+		`group inline-flex items-center relative duration-300 ease-in-out hover:${color} ` +
+		(isActive && `!${color}`)
 
 	return (
 		<li className={s.wrapper}>

@@ -106,4 +106,14 @@ export const menu: MenuType = {
 			title: 'Як працює браузер',
 		},
 	],
+	css: [
+		{
+			to: AppPages.CSS_CURSOR,
+			title: 'Стилізація курсору',
+		},
+		{
+			to: AppPages.CSS_TRUNCATED_TEXT,
+			title: 'Truncated text...',
+		},
+	],
 }

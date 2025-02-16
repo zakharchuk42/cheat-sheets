@@ -8,7 +8,8 @@ import SocialsBlock from '../SocialsBlock'
 const Sidebar: React.FC = () => {
 	const { pathname } = useLocation()
 
-	const keyMenu = pathname.slice(1, 3)
+	const keyMenu = pathname.split('/')[1]
+
 	const currentMenu = menu[keyMenu]
 
 	return (

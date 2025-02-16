@@ -23,6 +23,8 @@ export const AppPages = {
 	JS_THIS: '/js/this',
 	JS_THIS_TASKS: '/js/this/tasks',
 	CSS: '/css',
+	CSS_CURSOR: '/css/cursor',
+	CSS_TRUNCATED_TEXT: '/css/truncated-text',
 	REACT: '/react',
 	TS: '/ts',
 }
